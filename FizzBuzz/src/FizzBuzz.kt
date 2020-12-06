@@ -11,6 +11,6 @@ fun fizz(n: Int): Array<String> {
 }
 
 fun main() {
-    val x = fizz(12)
+    val x = fizz(11)
     print(x.contentToString())
 }
