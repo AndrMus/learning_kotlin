@@ -3,9 +3,9 @@ fun fizz(n: Int): Array<String> {
     for (number in 1..n) {
         if (number % 3 == 0 && number % 5 == 0) {
             elements += "fizzbuzz"
-        } else if (number % 3 == 0 && number % 5 != 0) {
+        } else if (number % 3 == 0) {
             elements += "fizz"
-        } else if (number % 3 != 0 && number % 5 == 0) {
+        } else if (number % 5 == 0) {
             elements += "buzz"
         } else {
             elements += number.toString()
@@ -15,6 +15,6 @@ fun fizz(n: Int): Array<String> {
 }
 
 fun main() {
-    val x = fizz(n = 18)
+    val x = fizz(n = 30)
     print(x.contentToString())
 }
