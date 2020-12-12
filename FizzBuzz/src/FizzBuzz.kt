@@ -1,38 +1,27 @@
 fun fizz(n: Int): Array<String> {
     var elements: Array<String> = emptyArray()
-    var v: Boolean = false
-    var t: Boolean = false
 
     for (number in 1..n) {
 
-        if (number % 3 == 0) {
-            t = true
-        }
-        if (number % 5 == 0) {
-            v = true
-        }
+        val t = (number % 3 == 0)
+        val v = (number % 5 == 0)
 
-        if (t == true) {
-            if (v == true) {
+        if (t) {
+            if (v) {
                 elements += "fizzbuzz"
             } else {
                 elements += "fizz"
             }
-        } else if (v == true) {
+        } else if (v) {
             elements += "buzz"
         } else {
             elements += number.toString()
         }
-
-        t = false
-        v = false
     }
-
     return elements
-
 }
 
 fun main() {
-    val x = fizz(n = 15)
+    val x = fizz(n = 16)
     print(x.contentToString())
 }
